@@ -20,14 +20,18 @@ import com.brasilprev.customermanagement.search.usecase.SearchClientUseCase;
 public class SearchClientEntrypoint {
 	
 	public static final String CREATE_CLIENT_URL = "/client";
+	public static final String QUERY_PARAM_SEARCH = "search";
+	public static final String QUERY_PARAM_SEARCH_VALUE = "IDENTITY_DOCUMENT";
+	public static final String QUERY_PARAM_IDENTITY = "identity";
+	public static final String QUERY_PARAM_MISSING_IDENTITY = "Missing param identity";
 	
 	@Autowired
 	private SearchClientUseCase searchClientUseCase;
 	
-	@GetMapping(value = CREATE_CLIENT_URL, params={"search=IDENTITY_DOCUMENT"}, produces = MediaType.APPLICATION_JSON_VALUE)	
-	public ResponseEntity<List<ClientDTO>> searchByCPF(@RequestParam("identity") Optional<String> identity) {
+	@GetMapping(value = CREATE_CLIENT_URL, params={QUERY_PARAM_SEARCH+"="+QUERY_PARAM_SEARCH_VALUE}, produces = MediaType.APPLICATION_JSON_VALUE)	
+	public ResponseEntity<List<ClientDTO>> searchByCPF(@RequestParam(QUERY_PARAM_IDENTITY) Optional<String> identity) {
 		if(identity.isEmpty())
-			throw new ApplicationValidationException("Identity param not found");
+			throw new ApplicationValidationException(QUERY_PARAM_MISSING_IDENTITY);
 		
 		List<ClientDTO> listOfClients = SearchClientMapper.map(searchClientUseCase.searchByCPF(identity.get()));
 		

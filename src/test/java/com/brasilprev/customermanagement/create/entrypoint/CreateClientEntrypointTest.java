@@ -30,7 +30,7 @@ public class CreateClientEntrypointTest extends BasicIntegrationTest {
 	}
 
 	@Test
-	public void createClientFailureValidationField() throws IOException {
+	public void createClientFailureValidationField() {
 		RestAssured.given()
 						.contentType(ContentType.JSON)
 						.with()
