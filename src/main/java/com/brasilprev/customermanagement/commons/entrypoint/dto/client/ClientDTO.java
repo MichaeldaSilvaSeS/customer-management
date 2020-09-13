@@ -20,6 +20,8 @@ import lombok.Getter;
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ClientDTO {
 	
+	private Long id;
+	
 	@Length(min = 2, max = 197)
 	@NotBlank
 	private String name;

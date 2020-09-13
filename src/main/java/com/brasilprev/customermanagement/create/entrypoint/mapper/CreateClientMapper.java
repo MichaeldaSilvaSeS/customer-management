@@ -18,7 +18,7 @@ public class CreateClientMapper {
 		ClientDTO client = createClientCommand.getClient();
 		return ClientDomain.builder()
 						.name(client.getName())
-						.identificationDocument(mapIdentificationDocument(client.getIdentityDocuments()))
+						.identityDocument(mapIdentificationDocument(client.getIdentityDocuments()))
 						.address(mapAddress(client.getAddresses()))
 					.build();
 	}

@@ -9,9 +9,11 @@ import lombok.Getter;
 @Builder
 public class ClientDomain {
 	
+	private Long id;
+	
 	private String name;
 	
-	private Collection<IdentityDocumentDomain> identificationDocument;
+	private Collection<IdentityDocumentDomain> identityDocument;
 	
 	private Collection<AddressDomain> address;
 	

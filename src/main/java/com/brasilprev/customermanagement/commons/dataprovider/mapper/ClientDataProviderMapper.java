@@ -17,7 +17,7 @@ public class ClientDataProviderMapper {
 		
 		return ClientEntity.builder()
 						.name(clientDomain.getName())
-						.identityDocument(mapIdentificationDocument(clientDomain.getIdentificationDocument()))
+						.identityDocument(mapIdentityDocument(clientDomain.getIdentityDocument()))
 						.address(mapAddress(clientDomain.getAddress()))
 					.build();
 	}
@@ -41,7 +41,7 @@ public class ClientDataProviderMapper {
 					.orElseThrow(() -> new RuntimeException("Identification Document not found"));
 	}
 
-	private static String mapIdentificationDocument(
+	private static String mapIdentityDocument(
 			Collection<IdentityDocumentDomain> identificationDocument) {
 		
 		return identificationDocument.stream()

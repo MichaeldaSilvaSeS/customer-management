@@ -8,6 +8,10 @@ import lombok.Getter;
 @Getter
 @Builder
 public class ValidationErrorDTO {
+	
+	private int code;
+	
+	private String description;
 
 	private List<FieldValidationErroDTO> fieldErros;
 	
