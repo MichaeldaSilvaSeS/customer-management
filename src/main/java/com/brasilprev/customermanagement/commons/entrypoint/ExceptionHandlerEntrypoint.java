@@ -19,6 +19,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import com.brasilprev.customermanagement.commons.entrypoint.dto.validation.FieldValidationErroDTO;
 import com.brasilprev.customermanagement.commons.entrypoint.dto.validation.ValidationErrorDTO;
 import com.brasilprev.customermanagement.commons.entrypoint.validation.ApplicationValidationException;
+import com.brasilprev.customermanagement.commons.usecase.exception.DomainNotFoundException;
 
 @ControllerAdvice
 public class ExceptionHandlerEntrypoint extends ResponseEntityExceptionHandler {
@@ -58,6 +59,11 @@ public class ExceptionHandlerEntrypoint extends ResponseEntityExceptionHandler {
 								.fieldErros(Collections.emptyList())
 							.build()
 				); 
+	}
+	
+	@ExceptionHandler({DomainNotFoundException.class})
+	public ResponseEntity<Object> handleDomainException(HttpServletResponse response, Exception ex) {
+		return ResponseEntity.notFound().build();
 	}
 
 }

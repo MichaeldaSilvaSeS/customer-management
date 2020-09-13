@@ -1,4 +1,4 @@
-package com.brasilprev.customermanagement.create.entrypoint;
+package com.brasilprev.customermanagement.search.entrypoint;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
