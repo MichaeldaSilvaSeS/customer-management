@@ -25,7 +25,7 @@ public class DeleteClientEntrypoint {
 	private DeleteClientUseCase deleteClientUseCase;
 	
 	@DeleteMapping(value = CREATE_CLIENT_URL + "{" + PATH_PARAM_CLIENT_ID + "}", produces = MediaType.APPLICATION_JSON_VALUE)	
-	public ResponseEntity<?> createClient(@Valid @NotNull @Min(1) @PathVariable(PATH_PARAM_CLIENT_ID) Long clientId) {		
+	public ResponseEntity<?> deleteClient(@Valid @NotNull @Min(1) @PathVariable(PATH_PARAM_CLIENT_ID) Long clientId) {		
 		deleteClientUseCase.deleteClient(clientId);
 		
 		return ResponseEntity
