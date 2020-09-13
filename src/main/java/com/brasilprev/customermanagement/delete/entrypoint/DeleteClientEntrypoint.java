@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.brasilprev.customermanagement.delete.usecase.DeleteClientUseCase;
 
+
 @RestController
 public class DeleteClientEntrypoint {
 	

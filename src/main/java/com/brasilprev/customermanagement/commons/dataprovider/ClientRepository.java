@@ -36,4 +36,9 @@ public interface ClientRepository extends CreateClientGateway, SearchClientGatew
 		deleteById(id);
 	}
 	
+	@Override
+	default Boolean existClientById(Long clientId) {
+		return existsById(clientId);
+	}
+	
 }
