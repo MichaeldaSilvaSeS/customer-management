@@ -27,11 +27,11 @@ public class ClientDTO {
 	@Size(min = 1, max = 1)
 	@NotNull
 	@Valid
-	private Collection<IdentityDocumentDTO> identityDocument;
+	private Collection<IdentityDocumentDTO> identityDocuments;
 
 	@Size(min = 1, max = 1)
 	@NotNull
 	@Valid
-	private Collection<AddressDTO> address;	
+	private Collection<AddressDTO> addresses;	
 	
 }

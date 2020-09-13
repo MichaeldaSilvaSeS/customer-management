@@ -1,0 +1,22 @@
+{
+    "client": {
+        "name": "Michael",
+        "identity_documents": [
+            {
+                "identity_type": "CPF",
+                "identity": "531.078.620-10"
+            }
+        ],
+        "addresses": [
+            {
+                "postalCode": "09100-200",
+                "neighborhood": "neighborhood",
+                "city": "city",
+                "state": "state",
+                "thoroughfare": "thoroughfare",
+                "complement": "complement",
+                "number": 1
+            }
+        ]
+    }
+}

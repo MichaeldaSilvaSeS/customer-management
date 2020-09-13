@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "client": {
+                "client_id": 1
+            }
+        }
+    ],
+    "required": [
+        "client"
+    ],
+    "properties": {
+        "client": {
+            "$id": "#/properties/client",
+            "type": "object",
+            "title": "The client schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "client_id": 1
+                }
+            ],
+            "required": [
+                "client_id"
+            ],
+            "properties": {
+                "client_id": {
+                    "$id": "#/properties/client/properties/client_id",
+                    "type": "integer",
+                    "title": "The client_id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}
