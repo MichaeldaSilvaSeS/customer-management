@@ -12,10 +12,11 @@ import com.brasilprev.customermanagement.commons.dataprovider.mapper.ClientDataP
 import com.brasilprev.customermanagement.commons.dataprovider.mapper.ClientDomainMapper;
 import com.brasilprev.customermanagement.commons.usecase.domain.ClientDomain;
 import com.brasilprev.customermanagement.create.usecase.gateway.CreateClientGateway;
+import com.brasilprev.customermanagement.delete.usecase.gateway.DeleteClientGateway;
 import com.brasilprev.customermanagement.search.usecase.gateway.SearchClientGateway;
 
 @Repository
-public interface ClientRepository extends CreateClientGateway, SearchClientGateway,  CrudRepository<ClientEntity, Long> {
+public interface ClientRepository extends CreateClientGateway, SearchClientGateway, DeleteClientGateway, CrudRepository<ClientEntity, Long> {
 
 	@Override
 	default Long createClient(ClientDomain client) {
@@ -25,8 +26,14 @@ public interface ClientRepository extends CreateClientGateway, SearchClientGatew
 	@Query("SELECT c FROM ClientEntity c WHERE c.identityDocument = :cpf")
 	List<ClientEntity> searchEntityByCPF(@Param("cpf") String cpf);
 	
+	@Override
 	default List<ClientDomain> searchByCPF(String cpf) {
 		return ClientDomainMapper.map(searchEntityByCPF(cpf));
+	}
+	
+	@Override
+	default void deleteClientById(Long id) {
+		deleteById(id);
 	}
 	
 }
