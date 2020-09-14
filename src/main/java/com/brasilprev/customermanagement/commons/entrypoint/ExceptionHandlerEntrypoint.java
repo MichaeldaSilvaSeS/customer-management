@@ -63,7 +63,15 @@ public class ExceptionHandlerEntrypoint extends ResponseEntityExceptionHandler {
 	
 	@ExceptionHandler({DomainNotFoundException.class})
 	public ResponseEntity<Object> handleDomainException(HttpServletResponse response, Exception ex) {
-		return ResponseEntity.notFound().build();
+		return ResponseEntity
+				.status(HttpStatus.NOT_FOUND)
+				.body(
+						ValidationErrorDTO.builder()
+							.code(404)
+							.description("Domain not found")
+							.fieldErros(Collections.emptyList())
+						.build()
+				);
 	}
 
 }

@@ -16,6 +16,13 @@ import com.brasilprev.customermanagement.commons.entrypoint.validation.Applicati
 import com.brasilprev.customermanagement.search.entrypoint.mapper.SearchClientMapper;
 import com.brasilprev.customermanagement.search.usecase.SearchClientUseCase;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.enums.ParameterIn;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+
 @RestController
 public class SearchClientEntrypoint {
 	
@@ -28,6 +35,16 @@ public class SearchClientEntrypoint {
 	@Autowired
 	private SearchClientUseCase searchClientUseCase;
 	
+	@Operation(summary = "Search for client",
+		parameters = {
+				@Parameter(description = "Search type", required = true , example = QUERY_PARAM_SEARCH_VALUE, in = ParameterIn.QUERY, name = QUERY_PARAM_SEARCH),
+				@Parameter(description = "Identity value for search", required = true , example = "53107862010", in = ParameterIn.QUERY, name = QUERY_PARAM_IDENTITY)
+		},
+		responses = {
+				  @ApiResponse(responseCode = "204", description = "Any client found", content = @Content(schema = @Schema(implementation = Void.class))), 
+				  @ApiResponse(responseCode = "200", description = "Client(s) found", content = @Content(schema = @Schema(implementation = ClientDTO.class)))
+		}
+	)
 	@GetMapping(value = CREATE_CLIENT_URL, params={QUERY_PARAM_SEARCH+"="+QUERY_PARAM_SEARCH_VALUE}, produces = MediaType.APPLICATION_JSON_VALUE)	
 	public ResponseEntity<List<ClientDTO>> searchByCPF(@RequestParam(QUERY_PARAM_IDENTITY) Optional<String> identity) {
 		if(identity.isEmpty())
