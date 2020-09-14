@@ -2,14 +2,14 @@
 Manage customer portfolio (name, identity e address)
 
 ### Documents
-<dl>
-  <dt>API contract</dt>
-  <dd>[Swagger](http://localhost:8080/swagger-ui.html)</dd>
-  <dt>JavaDOC</dt>
-  <dd>Main classes documented</dd>
-  <dt>Observability</dt>
-  <dd>[Metrics](http://localhost:8080/actuator/metrics),[Health](http://localhost:8080/actuator/health),[Configprops](http://localhost:8080/actuator/health)</dd>
-</dl>
+
+#### API contract
+ [Swagger](http://localhost:8080/swagger-ui.html)
+#### JavaDOC
+ Main classes documented</dd>
+#### Observability</dt>
+ [Metrics](http://localhost:8080/actuator/metrics), [Health](http://localhost:8080/actuator/health), [Configprops](http://localhost:8080/actuator/health)
+
 
 ### Stack
 1. Java 11
@@ -20,8 +20,8 @@ Manage customer portfolio (name, identity e address)
 6. RestAssured
 7. H2
 8. Mockito
-9. JUnit5
-10. Spring Actuator
+9. Spring Actuator
+10. JUnit5
 
 ### Test
 1. Funcional
