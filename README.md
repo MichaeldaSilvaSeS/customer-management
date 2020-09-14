@@ -3,13 +3,10 @@ Manage customer portfolio (name, identity e address)
 
 ### Documents
 
-#### API contract
- [Swagger](http://localhost:8080/swagger-ui.html)
+#### API contract [Swagger](http://localhost:8080/swagger-ui.html)
 #### JavaDOC
  Main classes documented</dd>
-#### Observability</dt>
- [Metrics](http://localhost:8080/actuator/metrics), [Health](http://localhost:8080/actuator/health), [Configprops](http://localhost:8080/actuator/health)
-
+#### Observability [Metrics](http://localhost:8080/actuator/metrics), [Health](http://localhost:8080/actuator/health), [Configprops](http://localhost:8080/actuator/health)
 
 ### Stack
 1. Java 11
@@ -29,3 +26,13 @@ Manage customer portfolio (name, identity e address)
 3. Component
 4. Unit
 5. Explortory
+
+### Software engineering techniques
+1. Representation State Transfer (REST)
+3. Incremental Development (Agile)
+2. Domain-Driven Design (DDD)
+3. Clean Architecture
+4. Command Query Responsability Segragation (CQRS)
+5. Test-Driven Desing (TDD)
+6. Trunk Based Development
+7. Feature branch
