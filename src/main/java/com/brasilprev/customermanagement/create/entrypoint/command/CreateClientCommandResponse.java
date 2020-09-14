@@ -12,7 +12,6 @@ import lombok.Getter;
 @Builder
 @JsonTypeName("client")
 @JsonTypeInfo(include = JsonTypeInfo.As.WRAPPER_OBJECT, use = JsonTypeInfo.Id.NAME)
-//@JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class CreateClientCommandResponse {
 	
