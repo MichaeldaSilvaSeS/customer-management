@@ -32,7 +32,7 @@ public class DeleteClientEntrypoint {
 	@Autowired
 	private DeleteClientUseCase deleteClientUseCase;
 	
-	@Operation(summary = "Delete client",
+	@Operation(summary = "Delete a client",
 		parameters = {
 			@Parameter(description = "Client id", required = true , example = "1", in = ParameterIn.PATH, name = PATH_PARAM_CLIENT_ID)
 		},
