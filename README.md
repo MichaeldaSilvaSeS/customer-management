@@ -11,7 +11,7 @@ Manage customer portfolio (name, identity e address)
 ### Stack
 1. Java 11
 2. SpringBoot
-3. [Amazon Web Services (AWS) <- Click to see](http://ec2-3-128-170-234.us-east-2.compute.amazonaws.com/swagger-ui.html) 
+3. [Amazon Web Services (AWS) <- Click to see (Desativado 14/02/2020)](http://ec2-3-128-170-234.us-east-2.compute.amazonaws.com/swagger-ui.html) 
 4. Java Persistence API (JPA)
 5. Bean Validation
 6. Swagger
