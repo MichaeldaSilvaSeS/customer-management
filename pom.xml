@@ -14,6 +14,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>customer-management</name>
 	<description>Cadastro de clientes (nome, cpf e endereco)</description>
+	
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/MichaeldaSilvaSeS</url>
+		</repository>
+	</distributionManagement>
 
 	<properties>
 		<java.version>11</java.version>
