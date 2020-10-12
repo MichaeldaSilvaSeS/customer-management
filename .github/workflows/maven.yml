@@ -25,7 +25,7 @@ jobs:
     - name: Search version
       run: |
         export PROJECT_VERSION_VALUE=$(mvn help:evaluate -Dexpression=project.version)
-        echo '::set-env name=PROJECT_VERSION::$PROJECT_VERSION_VALUE'
+        echo "::set-env name=PROJECT_VERSION::$PROJECT_VERSION_VALUE"
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
