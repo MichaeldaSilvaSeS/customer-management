@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.brasilprev</groupId>
 	<artifactId>customer-management</artifactId>
-	<version>0.1.2-SNAPSHOT</version>
+	<version>0.1.3-SNAPSHOT</version>
 	<name>customer-management</name>
 	<description>Cadastro de clientes (nome, cpf e endereco)</description>
 	
