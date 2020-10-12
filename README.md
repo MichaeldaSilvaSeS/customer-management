@@ -20,6 +20,7 @@ Manage customer portfolio (name, identity e address)
 9. Mockito
 10. Spring Actuator
 11. JUnit5
+12. Docker
 
 ### Test
 1. Funcional
