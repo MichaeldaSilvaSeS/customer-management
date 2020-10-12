@@ -41,3 +41,7 @@ jobs:
            - Ajuste de bugs
         draft: false
         prerelease: false
+    - name: Publish to GitHub Packages Apache Maven
+      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml -Dmaven.test.skip=true
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
