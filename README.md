@@ -21,6 +21,7 @@ Manage customer portfolio (name, identity e address)
 10. Spring Actuator
 11. JUnit5
 12. Docker
+13. Github Actions
 
 ### Test
 1. Funcional
@@ -40,3 +41,4 @@ Manage customer portfolio (name, identity e address)
 7. Cloud Computer
 8. Trunk Based Development
 9. Feature branch
+10. DevOps
